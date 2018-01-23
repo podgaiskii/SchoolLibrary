@@ -5,7 +5,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import java.util.Date;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -36,7 +36,7 @@ class XMLHandler extends DefaultHandler {
     public void startDocument() throws SAXException {
         switch (parsingType) {
             case ALL_PUBLICATIONS:
-                publicationsQueue = new PriorityQueue<>();
+                publicationsQueue = new LinkedList<>();
                 break;
             case PUPILS_READ_MORE_THAN_ONE_BOOK:
                 pupilsQueue = new PriorityQueue<>(new UpwardsPupilsComparator());
