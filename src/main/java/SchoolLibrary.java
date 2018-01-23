@@ -44,14 +44,14 @@ public class SchoolLibrary {
         try {
             if (in.hasNextInt()) {
                 choice = in.nextInt();
-                if (choice < 1 || choice > 3) {
+                if (choice < 1 || choice > 4) {
                     throw new NoSuchElementException();
                 }
             } else {
                 throw new NoSuchElementException();
             }
         } catch (NoSuchElementException e) {
-            System.err.println("Input error! There should be only numbers from 1 to 3!");
+            System.err.println("Input error! There should be only numbers from 1 to 4!");
             try {
                 System.in.skip(System.in.available());
             } catch (IOException e1) { }
