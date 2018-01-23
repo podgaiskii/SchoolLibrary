@@ -1,22 +1,14 @@
 package main.java;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Pupil {
 
-    private int ID;
     private String name;
     private String surname;
-    private Date DOB;
+    private Date birthdate;
     private int booksRead;
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
 
     public String getName() {
         return name;
@@ -34,12 +26,16 @@ public class Pupil {
         this.surname = surname;
     }
 
-    public Date getDOB() {
-        return DOB;
+    public Date getBirthdate() {
+        return birthdate;
     }
 
-    public void setDOB(Date DOB) {
-        this.DOB = DOB;
+    public String getFormattedBirthdate() {
+        return new SimpleDateFormat("dd-MM-yyyy").format(birthdate);
+    }
+
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
     }
 
     public int getBooksRead() {

@@ -8,6 +8,14 @@ public class SchoolLibrary {
 
     public static void main(String[] args) {
         while (true) {
+            switch (getChoice()) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+            }
             System.out.println(getChoice());
         }
     }
@@ -43,6 +51,10 @@ public class SchoolLibrary {
             e.printStackTrace();
         }
         return -1;
+    }
+
+    private static void viewPublications() {
+
     }
 
 }
