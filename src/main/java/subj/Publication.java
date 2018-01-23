@@ -1,4 +1,4 @@
-package main.java;
+package main.java.subj;
 
 public class Publication {
 
@@ -13,6 +13,10 @@ public class Publication {
         this.type = type;
     }
 
+    public void setType(String type) {
+        this.type = PublicationType.valueOf(type.toUpperCase());
+    }
+
     public String getTitle() {
         return title;
     }
@@ -20,4 +24,14 @@ public class Publication {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(type.toString());
+        sb.append(" \"");
+        sb.append(title);
+        sb.append('\"');
+        return sb.toString();
+    }
+
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE Publications [
+        <!ELEMENT Publications (publication+)>
+        <!ELEMENT publication (title)>
+        <!ATTLIST publication type (Book | Article | Journal | Newspaper) #REQUIRED>
+        <!ELEMENT title (#PCDATA)>
+        ]>
+
+<Publications>
+    <publication type="Book">
+        <title>The Hunger Games</title>
+    </publication>
+    <publication type="Book">
+        <title>Harry Potter and the Sorcerer's Stone</title>
+    </publication>
+    <publication type="Article">
+        <title>Tesla’s Pay Deal to Keep Elon Musk: All or Nothing</title>
+    </publication>
+    <publication type="Article">
+        <title>2018 Oscar Nominations: What to Expect</title>
+    </publication>
+    <publication type="Journal">
+        <title>Rolling Stone #1302</title>
+    </publication>
+    <publication type="Newspaper">
+        <title>The Guardian, Tuesday, 23 January 2018</title>
+    </publication>
+    <publication type="Newspaper">
+        <title>The Wall Street Journal, January 22, 2018</title>
+    </publication>
+    <publication type="Article">
+        <title>Is Schizophrenia Really a Brain Disease?</title>
+    </publication>
+    <publication type="Book">
+        <title>Pride and Prejudice</title>
+    </publication>
+    <publication type="Journal">
+        <title>TIME Magazine Vol. 190, No. 27</title>
+    </publication>
+    <publication type="Article">
+        <title>Marijuana Withdrawal Syndrome</title>
+    </publication>
+    <publication type="Newspaper">
+        <title>The New York Times, MONDAY, JANUARY 22, 2018</title>
+    </publication>
+    <publication type="Book">
+        <title>The Chronicles of Narnia</title>
+    </publication>
+    <publication type="Journal">
+        <title>Cosmopolitan, December 2017</title>
+    </publication>
+    <publication type="Journal">
+        <title>Maxim, November/December 2017</title>
+    </publication>
+    <publication type="Newspaper">
+        <title>China Daily, January 23, 2018</title>
+    </publication>
+    <publication type="Book">
+        <title>The Lord of the Rings</title>
+    </publication>
+    <publication type="Book">
+        <title>The Da Vinci Code</title>
+    </publication>
+    <publication type="Article">
+        <title>Vaccines - A Two-Edged Sword</title>
+    </publication>
+    <publication type="Article">
+        <title>God And Religion: Is It All In Our Heads?</title>
+    </publication>
+    <publication type="Book">
+        <title>Alice's Adventures in Wonderland</title>
+    </publication>
+    <publication type="Book">
+        <title>Romeo and Juliet</title>
+    </publication>
+</Publications>

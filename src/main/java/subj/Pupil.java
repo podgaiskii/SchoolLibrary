@@ -1,5 +1,7 @@
-package main.java;
+package main.java.subj;
 
+import java.text.DateFormat;
+import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,6 +11,7 @@ public class Pupil {
     private String surname;
     private Date birthdate;
     private int booksRead;
+    private static DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
     public String getName() {
         return name;
@@ -31,11 +34,15 @@ public class Pupil {
     }
 
     public String getFormattedBirthdate() {
-        return new SimpleDateFormat("dd-MM-yyyy").format(birthdate);
+        return dateFormat.format(birthdate);
     }
 
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public void setBirthdate(String birthdate) {
+        this.birthdate = dateFormat.parse(birthdate, new ParsePosition(0));
     }
 
     public int getBooksRead() {
@@ -45,4 +52,19 @@ public class Pupil {
     public void setBooksRead(int booksRead) {
         this.booksRead = booksRead;
     }
+
+    public String getFullData(boolean includingBirthdate) {
+        StringBuilder sb = new StringBuilder(name);
+        sb.append(' ');
+        sb.append(surname);
+        if (includingBirthdate) {
+            sb.append(", ");
+            sb.append(getFormattedBirthdate());
+        }
+        sb.append(": ");
+        sb.append(booksRead);
+        sb.append(" book(s) read");
+        return sb.toString();
+    }
+
 }
